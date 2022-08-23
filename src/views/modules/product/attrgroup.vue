@@ -13,10 +13,12 @@
             <el-button @click="getDataList()">查询</el-button>
             <el-button type="success" @click="getAllDataList()">查询全部</el-button>
             <el-button
+              v-if="isAuth('product:attrgroup:save')"
               type="primary"
               @click="addOrUpdateHandle()"
             >新增</el-button>
             <el-button
+              v-if="isAuth('product:attrgroup:delete')"
               type="danger"
               @click="deleteHandle()"
               :disabled="dataListSelections.length <= 0"
@@ -28,7 +30,8 @@
           border
           v-loading="dataListLoading"
           @selection-change="selectionChangeHandle"
-          style="width: 100%;">
+          style="width: 100%;"
+        >
           <el-table-column type="selection" header-align="center" align="center" width="50"></el-table-column>
           <el-table-column prop="attrGroupId" header-align="center" align="center" label="分组id"></el-table-column>
           <el-table-column prop="attrGroupName" header-align="center" align="center" label="组名"></el-table-column>
@@ -210,5 +213,5 @@ export default {
   }
 };
 </script>
-<style scoped>
+<style scoped>
 </style>

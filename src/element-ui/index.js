@@ -7,7 +7,7 @@
  * 注意:
  *  1. 打包只会包含释放(解开注释)的组件, 减少打包文件大小
  */
-import Vue from 'vue';
+import Vue from 'vue'
 import {
   Pagination,
   Dialog,
@@ -157,12 +157,14 @@ Vue.use(Image);
 Vue.use(Calendar);
 
 
-Vue.use(Loading.directive);
+Vue.use(Loading.directive)
 
-Vue.prototype.$loading = Loading.service;
-Vue.prototype.$msgbox = MessageBox;
-Vue.prototype.$alert = MessageBox.alert;
-Vue.prototype.$confirm = MessageBox.confirm;
-Vue.prototype.$prompt = MessageBox.prompt;
-Vue.prototype.$notify = Notification;
-Vue.prototype.$message = Message;
+Vue.prototype.$loading = Loading.service
+Vue.prototype.$msgbox = MessageBox
+Vue.prototype.$alert = MessageBox.alert
+Vue.prototype.$confirm = MessageBox.confirm
+Vue.prototype.$prompt = MessageBox.prompt
+Vue.prototype.$notify = Notification
+Vue.prototype.$message = Message
+
+Vue.prototype.$ELEMENT = { size: 'medium' }
